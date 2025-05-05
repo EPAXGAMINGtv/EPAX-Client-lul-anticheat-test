@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "epax-hack-client",
+	"version": "${version}",
+	"name": "epax-hack-client",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"EPAXGAMING!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/epax-hack-client/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"de.epax.Epaxhackclient"
+		]
+	},
+	"mixins": [
+		"epax-hack-client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
