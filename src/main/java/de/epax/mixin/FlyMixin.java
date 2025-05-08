@@ -35,6 +35,8 @@ public abstract class FlyMixin {
             player.setPosition(player.getX() + motionX, player.getY() + motionY, player.getZ() + motionZ);
             player.setOnGround(true);
 
+
+
         }else {
 
         }
