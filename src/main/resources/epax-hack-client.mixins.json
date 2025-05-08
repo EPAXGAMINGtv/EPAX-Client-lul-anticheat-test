@@ -4,8 +4,7 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"flyMixin",
-		"AutoCritMixin",
-		"MixinChatEvent"
+		"AutoCritMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
