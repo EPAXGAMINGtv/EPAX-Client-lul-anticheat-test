@@ -10,13 +10,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ClientPlayerEntity.class)
-public abstract class flyMixin {
+public abstract class FlyMixin {
 
     @Inject(method = "tickMovement",at =@At("HEAD"),cancellable = true)
     public void tickMovement(CallbackInfo ci) {
         if (EpaxClientState.fly==true){
             ClientPlayerEntity player = (ClientPlayerEntity) (Object) this;
-            double flySpeed = 0.08;
+            double flySpeed = 0.05;
             double motionY = 0;
             if (MinecraftClient.getInstance().options.jumpKey.isPressed()) {
                 motionY += flySpeed;
@@ -34,6 +34,7 @@ public abstract class flyMixin {
             player.setVelocity(motionX, motionY, motionZ);
             player.setPosition(player.getX() + motionX, player.getY() + motionY, player.getZ() + motionZ);
             player.setOnGround(true);
+
         }else {
 
         }

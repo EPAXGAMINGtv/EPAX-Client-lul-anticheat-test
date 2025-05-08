@@ -3,10 +3,13 @@
 	"package": "de.epax.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"flyMixin",
-		"AutoCritMixin"
+		"AutoCritMixin",
+		"FlyMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	}
+	},
+	"client": [
+		"FlyMixin"
+	]
 }
