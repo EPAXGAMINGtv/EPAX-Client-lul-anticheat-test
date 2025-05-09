@@ -40,7 +40,33 @@ public class EpaxClientCommands {
                                         return 1;
                                     })
                             )
+                    )  .then(literal("doublejump")
+                            .then(argument("value", BoolArgumentType.bool())
+                                    .executes(context -> {
+                                        boolean value = BoolArgumentType.getBool(context, "value");
+                                        EpaxClientState.doublejump = value;
+
+                                        MinecraftClient.getInstance().player.sendMessage(
+                                                Text.literal("DoubleJump set to: " + value), false
+                                        );
+                                        return 1;
+                                    })
+                            )
                     )
+                    .then(literal("boatfly")
+                            .then(argument("value", BoolArgumentType.bool())
+                                    .executes(context -> {
+                                        boolean value = BoolArgumentType.getBool(context, "value");
+                                        EpaxClientState.boatFly = value;
+
+                                        MinecraftClient.getInstance().player.sendMessage(
+                                                Text.literal("boatfly set to: " + value), false
+                                        );
+                                        return 1;
+                                    })
+                            )
+                    )
+
             );
 
         });
